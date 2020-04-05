@@ -2,10 +2,21 @@
 .container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     font-size: 1em;
-    text-align: center;
     padding: 5px;
+}
+
+.container ol {
+    display: flex;
+    flex-flow: wrap row;
+}
+.container li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
 }
 
 .container div {
@@ -15,9 +26,75 @@
     cursor: pointer;
 }
 
+.main_tullbar {
+    position: relative;
+}
+
 img {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
+}
+
+/* .menu img {
+    position: absolute;
+    border: 1px solid rgba(37, 26, 26, 0.001);
+    left: -10px;
+} */
+
+.main_tullbar label {
+    position: absolute;
+    background: url(images\mars.png);
+    width: 32px;
+    height: 32px;
+    /* order: 5; */
+    
+}
+ label a {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+ }
+
+/* .menu {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: url(..\images\Menu.svg);
+    margin-top: 3px;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid #ffffff;
+  } */
+
+/*                                                      Normal */
+.mail,
+.images {
+    text-decoration: none;
+}
+
+/*                                                       Focus  */
+.mail:focus,
+.images:focus {
+    text-decoration: none;
+}
+
+label img:focus {
+    border: 1px solid #1d92bd;
+    border-radius: 20%;
+}
+/*                                                       Hover */
+.mail:hover,
+.images:hover {
+    text-decoration: none;
+}
+
+.icons div:hover {
+    border: 1px solid #1d92bd;
+}
+
+.icons2 div:hover {
+    display: inline-block;
+    border: 1px solid #1d92bd;
 }
 
 label img:hover {
@@ -25,8 +102,10 @@ label img:hover {
     border-radius: 20%;
 }
 
-.icons div:hover {
-    border: 1px solid #1d92bd;
+/*                                                       Active */
+.mail:active,
+.images:active {
+    text-decoration: none;
 }
 
 .main_tullbar input {
@@ -36,10 +115,6 @@ label img:hover {
 
 /*                                           Общий блок с иконками */
 
-.main_tullbar {
-    position: relative;
-}
-
 .container .icons {
     position: absolute;
     width: 300px;
@@ -48,10 +123,12 @@ label img:hover {
     right: -120px;
     box-shadow: -1px 15px 12px 0px rgba(0, 0, 0, 0.75);
 }
-
+.icons div {
+    border: 1px solid rgba(37, 26, 26, 0.001);
+}
 .container .icons div {
     display: inline-block;
-    margin: 5px;
+    margin: 3px;
 }
 
 .icons {
@@ -74,21 +151,16 @@ input:checked ~ .icons2 {
     display: block;
 }
 
-.icons2 div:hover {
-    display: inline-block;
-    border: 1px solid #1d92bd;
-}
 .icons2 div {
     display: block;
 }
 
 .icons label {
     display: block;
-    background-color: darkgrey;
-    height: auto;
+    background-color: rgba(233, 221, 221, 0.877);
+    height: 48px;
 }
 
-#second:checked~  label{
+.second:checked ~ label {
     display: none;
 }
-                                              
