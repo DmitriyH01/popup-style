@@ -66,17 +66,15 @@ img {
 .menu_items {
   text-decoration: none;
 }
-.icons div {
+.popup_icons {
   border: 1.5px solid transparent;
+  display: inline-block;
+  margin: 3px;
 }
-.icons div a {
+.popup_icons a {
   text-decoration: none;
 }
 
-
-.icons2 div {
-  border: 1.5px solid transparent;
-}
 
 /*                                                       Focus  */
 
@@ -84,6 +82,10 @@ img {
 .second:focus + .menu_more {
   border: 1.5px solid #4e91fc;
   border-radius: 1.5px;
+}
+
+.popup_icons:focus {
+  border: 1.5px solid lightblue;
 }
 
 /*                                                       Hover */
@@ -106,32 +108,31 @@ img {
 }
 
 /*                                                       Active */
-/* .menu_items a img:active {
+.menu_items a img:active {
   border: 1.5px solid #4e91fc;
-} */
+}
 
 /*                                           Общий блок с иконками */
 
 .container .icons {
   position: absolute;
-  width: 300px;
-  height: 400px;
+  width: 320px;
+  height: 410px;
   top: 50px;
   right: -120px;
   box-shadow: -1px 15px 12px 0px rgba(0, 0, 0, 0.75);
+  padding: 0.1em;
 }
-.icons div {
-  border: 1.5px solid rgba(37, 26, 26, 0.001);
-}
-.container .icons div {
+
+/* .container .icons div {
   display: inline-block;
   margin: 3px;
-}
+} */
 
 .icons {
   overflow-y: auto;
-  height: 410px;
-  max-height: 410px;
+  height: 420px;
+  max-height: 420px;
   display: none; /*  Скрываю общий блок с иконками */
 }
 
@@ -154,14 +155,10 @@ input:checked ~ .icons2 {
   display: block;
 }
 
-.icons2 div {
-  display: block;
-}
-
 .icons label {
   display: block;
   background-color: rgba(233, 221, 221, 0.877);
-  height: 40px;
+  height: 35px;
   width: 99%;
 }
 
